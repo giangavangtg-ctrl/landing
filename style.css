@@ -1,0 +1,136 @@
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* --- ĐỊNH DẠNG CHO DESKTOP --- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    color: white;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #f39c12;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các khối rớt dòng nếu không đủ chỗ */
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.service {
+    flex: 1;
+    min-width: 250px; /* Đảm bảo chiều rộng tối thiểu cho mỗi dịch vụ */
+    background-color: lightblue;
+    padding: 30px 20px;
+    border-radius: 8px;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ddd;
+}
+
+.testimonials h2 {
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* --- ĐỊNH DẠNG RESPONSIVE CHO MOBILE (Màn hình < 768px) --- */
+@media (max-width: 768px) {
+    /* Tạm thời ẩn menu trên mobile theo yêu cầu bài toán */
+    .nav ul {
+        display: none;
+    }
+
+    /* Giảm khoảng cách padding để phù hợp màn hình nhỏ */
+    .hero {
+        padding: 60px 20px;
+    }
+
+    /* Chuyển các khối dịch vụ từ hàng ngang sang cột dọc */
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    }
+
+    .services,
+    .testimonials {
+        padding: 40px 20px;
+    }
+}
